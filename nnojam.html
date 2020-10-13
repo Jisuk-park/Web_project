@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="/lib/w3.css">
+
+
+  <title>노잼인생-잡지</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+
+  @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@600&display=swap');
+
+
+
+
+      a{color: black; text-decoration: none;}
+      p{padding:0; margin: 0}
+
+      body {width: 100%; height: 100%; padding: 0; margin: 0; margin-bottom: 3%; overflow-x:hidden;}
+
+      
+    .title1{position:fixed; color:black; padding-left:0%; padding-bottom:2%; font-size:18vw; top:0%; left: 0%; z-index: 999;}
+    .title2{position:fixed; color:black; padding-left:0%; padding-bottom:2%; font-size:18vw; top:0%; right: 0%; z-index: 999;}
+
+    .rim{position:fixed; color:black; padding-right:0%; padding-bottom:0%; font-size:3vw; padding-top:22%; right: 43%;  rotate-ms-transform: rotate(-90deg); -webkit-transform: rotate(-180deg); 
+        transform: rotate(-90deg); z-index: 999;}
+    .suk{position:fixed; color:black; padding-right:0%; padding-bottom:0%; font-size:3vw; padding-top:8%; right: 36%; rotate-ms-transform: rotate(-90deg); -webkit-transform: rotate(-180deg); 
+        transform: rotate(-90deg); z-index: 999;}
+
+    .photo{left: 2%; float: left; height: auto; padding-left: 1.5%; overflow: hidden; padding-top: 8%;}
+
+
+        /*잡지*/
+        .mySlides{padding-top: 6%; padding-left: 0%;}
+        .mySlides1{padding-top: 6%; padding-left: 0%;}
+        .mySlides2{padding-top: 3%; padding-left: 0%;}
+        .mySlides3{padding-top: 3%; padding-left: 0%;}
+        .mySlides4{padding-top: 3%; padding-left: 0%;}
+        .mySlides5{padding-top: 3%; padding-left: 0%;}
+
+          .btn-floating{font-size : 3vw;}
+          .btn-floating1{font-size : 3vw;}
+          .btn-floating2{font-size : 3vw;}
+          .btn-floating3{font-size : 3vw;}
+          .btn-floating4{font-size : 3vw;}
+          .btn-floating5{font-size : 3vw;}
+
+
+        /*font-english*/
+       .font-b{font-family: 'ZCOOL KuaiLe', cursive;}
+       .font-c{font-family: 'Righteous', cursive;}
+       /*font-kor*/
+       .font-f{ font-family: 'Do Hyeon', sans-serif;}
+       /*본문*/
+       .font-g{font-family: 'Gothic A1', sans-serif;}
+
+     #mask {position:absolute; z-index:9000; background-color:#000; display:none; left:0; top:20%;}
+    .window{display: none; position:absolute; top:40%; left: 27%; z-index:10000;}
+      
+
+  </style>
+
+   <script src="https://code.jquery.com/jquery-latest.js"></script> 
+    <script>
+    function wrapWindowByMask(){
+        //화면의 높이와 너비를 구한다.
+        var maskHeight = $(document).height();  
+        var maskWidth = $(window).width();  
+
+        //마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
+        $('#mask').css({'width':maskWidth,'height':maskHeight});  
+
+        //애니메이션 효과 - 일단 1초동안 까맣게 됐다가 80% 불투명도로 간다.
+        $('#mask').fadeIn(1000);      
+        $('#mask').fadeTo("slow",0.8);    
+
+        //윈도우 같은 거 띄운다.
+        $('.window').show();
+    }
+
+    $(document).ready(function(){
+        //검은 막 띄우기
+        $('.openMask').click(function(e){
+            e.preventDefault();
+            wrapWindowByMask();
+        });
+
+        //닫기 버튼을 눌렀을 때
+        $('.window .close').click(function (e) {  
+            //링크 기본동작은 작동하지 않도록 한다.
+            e.preventDefault();  
+            $('#mask, .window').hide();  
+        });       
+
+        //검은 막을 눌렀을 때
+        $('#mask').click(function () {  
+            $(this).hide();  
+            $('.window').hide();  
+        });      
+    });
+    </script>
+
+</head>
+
+<body>
+
+     
+      <div class="title1 font-b"><a href="nojam.html"> NoJam</div>
+      <div class="title2 font-b"><a href="nnojam.html">Life</a></div>
+      <div class="rim font-b"><a href="nojam(after).html">Rim&</a></div>
+      <div class="suk font-b"><a href="nojam(m).html">Suk</a></div>
+
+
+
+  <div class="w3-content1" style="width: 100%; height: 100%; position:relative; padding-top:7%; padding-left: 0%;">
+   
+     <img class="mySlides1" src="chair/mchair1.jpg" style="width:100%;">
+     <img class="mySlides1" src="chair/mchair2.jpg" style="width:100%;">
+     <img class="mySlides1" src="chair/mchair3.jpg" style="width:100%;">
+     <img class="mySlides1" src="chair/mchair4.jpg" style="width:100%;">
+     <img class="mySlides1" src="chair/mchair5.jpg" style="width:100%;">
+     <img class="mySlides1" src="chair/mchair6.jpg" style="width:100%;">
+     <img class="mySlides1" src="chair/mchair7.jpg" style="width:100%;">
+     <img class="mySlides1" src="chair/mchair8.jpg" style="width:100%;">
+     <img class="mySlides1" src="chair/mchair9.jpg" style="width:100%;">
+    
+  <a class="btn-floating1 " style="position:absolute; top:55%; left:2%" onclick="plusDivs1(-1)">❮</a>
+  <a class="btn-floating1" style="position:absolute; top:55%; right:3%" onclick="plusDivs1(1)">❯</a>
+  </div>
+
+
+
+  <div class="w3-content2" style="width: 100%; height: 100%; position:relative; top:0%; padding-left: 0%;">
+   
+     <img class="mySlides2" src="bed/mbed1.jpg" style="width:100%;">
+     <img class="mySlides2" src="bed/mbed2.jpg" style="width:100%;">
+     <img class="mySlides2" src="bed/mbed3.jpg" style="width:100%;">
+     <img class="mySlides2" src="bed/mbed4.jpg" style="width:100%;">
+     <img class="mySlides2" src="bed/mbed5.jpg" style="width:100%;">
+     <img class="mySlides2" src="bed/mbed6.jpg" style="width:100%;">
+     <img class="mySlides2" src="bed/mbed7.jpg" style="width:100%;">
+     <img class="mySlides2" src="bed/mbed8.jpg" style="width:100%;">
+     <img class="mySlides2" src="bed/mbed9.jpg" style="width:100%;">
+    
+  <a class="btn-floating2 " style="position:absolute; top:55%; left:2%" onclick="plusDivs2(-1)">❮</a>
+  <a class="btn-floating2" style="position:absolute; top:55%; right:3%" onclick="plusDivs2(1)">❯</a>
+  </div>
+
+
+  <div class="w3-content3" style="width: 100%; height: 100%; position:relative; top:0%; padding-left: 0%;">
+   
+     <img class="mySlides3" src="sofa/msofa1.jpg" style="width:100%;">
+     <img class="mySlides3" src="sofa/msofa2.jpg" style="width:100%;">
+     <img class="mySlides3" src="sofa/msofa3.jpg" style="width:100%;">
+     <img class="mySlides3" src="sofa/msofa4.jpg" style="width:100%;">
+     <img class="mySlides3" src="sofa/msofa5.jpg" style="width:100%;">
+     <img class="mySlides3" src="sofa/msofa6.jpg" style="width:100%;">
+     <img class="mySlides3" src="sofa/msofa7.jpg" style="width:100%;">
+     <img class="mySlides3" src="sofa/msofa8.jpg" style="width:100%;">
+     <img class="mySlides3" src="sofa/msofa9.jpg" style="width:100%;">
+    
+  <a class="btn-floating3 " style="position:absolute; top:55%; left:2%" onclick="plusDivs3(-1)">❮</a>
+  <a class="btn-floating3" style="position:absolute; top:55%; right:3%" onclick="plusDivs3(1)">❯</a>
+  </div>
+
+
+  <div class="w3-content4" style="width: 100%; height: 100%; position:relative; top:0%; padding-left: 0%;">
+   
+     <img class="mySlides4" src="floor/mfloor1.jpg" style="width:100%;">
+     <img class="mySlides4" src="floor/mfloor2.jpg" style="width:100%;">
+     <img class="mySlides4" src="floor/mfloor3.jpg" style="width:100%;">
+     <img class="mySlides4" src="floor/mfloor4.jpg" style="width:100%;">
+     <img class="mySlides4" src="floor/mfloor5.jpg" style="width:100%;">
+     <img class="mySlides4" src="floor/mfloor6.jpg" style="width:100%;">
+     <img class="mySlides4" src="floor/mfloor7.jpg" style="width:100%;">
+     <img class="mySlides4" src="floor/mfloor8.jpg" style="width:100%;">
+     <img class="mySlides4" src="floor/mfloor9.jpg" style="width:100%;">
+    
+  <a class="btn-floating4" style="position:absolute; top:55%; left:2%" onclick="plusDivs4(-1)">❮</a>
+  <a class="btn-floating4" style="position:absolute; top:55%; right:3%" onclick="plusDivs4(1)">❯</a>
+  </div>
+
+
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+
+<script>
+var slideIndex1 = 1;
+showDivs1(slideIndex1);
+function plusDivs1(n) {
+  showDivs1(slideIndex1 += n);
+}
+function showDivs1(n) {
+  var i1;
+  var x1 = document.getElementsByClassName("mySlides1");
+  if (n > x1.length) {slideIndex1 = 1}    
+  if (n < 1) {slideIndex1 = x1.length} ;
+  for (i1 = 0; i1 < x1.length; i1++) {
+     x1[i1].style.display = "none";  
+  }
+  x1[slideIndex1-1].style.display = "block";  
+}
+</script>
+
+
+
+<script>
+var slideIndex2 = 1;
+showDivs2(slideIndex2);
+function plusDivs2(n) {
+  showDivs2(slideIndex2 += n);
+}
+function showDivs2(n) {
+  var i2;
+  var x2 = document.getElementsByClassName("mySlides2");
+  if (n > x2.length) {slideIndex2 = 1}    
+  if (n < 1) {slideIndex2 = x2.length} ;
+  for (i2 = 0; i2 < x2.length; i2++) {
+     x2[i2].style.display = "none";  
+  }
+  x2[slideIndex2-1].style.display = "block";  
+}
+</script>
+
+
+
+
+<script>
+var slideIndex3 = 1;
+showDivs3(slideIndex3);
+function plusDivs3(n) {
+  showDivs3(slideIndex3 += n);
+}
+function showDivs3(n) {
+  var i3;
+  var x3 = document.getElementsByClassName("mySlides3");
+  if (n > x3.length) {slideIndex3 = 1}    
+  if (n < 1) {slideIndex3 = x3.length} ;
+  for (i3 = 0; i3 < x3.length; i3++) {
+     x3[i3].style.display = "none";  
+  }
+  x3[slideIndex3-1].style.display = "block";  
+}
+</script>
+
+
+
+
+<script>
+var slideIndex4 = 1;
+showDivs4(slideIndex4);
+function plusDivs4(n) {
+  showDivs4(slideIndex4 += n);
+}
+function showDivs4(n) {
+  var i4;
+  var x4 = document.getElementsByClassName("mySlides4");
+  if (n > x4.length) {slideIndex4 = 1}    
+  if (n < 1) {slideIndex4 = x4.length} ;
+  for (i4 = 0; i4 < x4.length; i4++) {
+     x4[i4].style.display = "none";  
+  }
+  x4[slideIndex4-1].style.display = "block";  
+}
+</script>
+
+
+
+<script>
+var slideIndex5 = 1;
+showDivs5(slideIndex5);
+function plusDivs5(n) {
+  showDivs5(slideIndex5 += n);
+}
+function showDivs5(n) {
+  var i5;
+  var x5 = document.getElementsByClassName("mySlides5");
+  if (n > x5.length) {slideIndex5 = 1}    
+  if (n < 1) {slideIndex5 = x5.length} ;
+  for (i5 = 0; i5 < x5.length; i5++) {
+     x5[i5].style.display = "none";  
+  }
+  x5[slideIndex5-1].style.display = "block";  
+}
+</script>
+
+
+
+
+</div>
+
+</body>
+
+</html>
