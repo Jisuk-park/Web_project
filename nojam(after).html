@@ -25,13 +25,27 @@
      
 
 
-    .title1{position:fixed; color:black; padding-left:0%; padding-bottom:2%; font-size:18vw; top:0%; left: 0%; z-index: 999;}
-    .title2{position:fixed; color:black; padding-left:0%; padding-bottom:2%; font-size:18vw; top:0%; right: 0%; z-index: 999;}
+    .title1{position:fixed; color:black; padding-left:0%; padding-bottom:2%; font-size:18vw; top:0%; left: 0%; z-index: 999; -webkit-animation: shake 0.3s ease-in-out 0.1s infinite alternate;}
+    .title2{position:fixed; color:black; padding-left:0%; padding-bottom:2%; font-size:18vw; top:0%; right: 0%; z-index: 999; -webkit-animation: shake 0.3s ease-in-out 0.1s infinite alternate;}
 
-    .rim{position:fixed; color:black; padding-right:0%; padding-bottom:0%; font-size:3vw; padding-top:22%; right: 43%;  rotate-ms-transform: rotate(-90deg); -webkit-transform: rotate(-180deg); 
-        transform: rotate(-90deg); z-index: 999;}
-    .suk{position:fixed; color:black; padding-right:0%; padding-bottom:0%; font-size:3vw; padding-top:8%; right: 36%; rotate-ms-transform: rotate(-90deg); -webkit-transform: rotate(-180deg); 
-        transform: rotate(-90deg); z-index: 999;}
+    .rim{}
+    .suk{-webkit-animation: shake 0.1s ease-in-out 0.1s infinite alternate;}
+
+
+
+   @-webkit-keyframes shake {from {-webkit-transform: rotate(5deg);}
+   to {-webkit-transform-origin:center center; -webkit-transform: rotate(-5deg);}}
+
+
+
+  #mytext {position:fixed; color:black; padding-right:0%; padding-bottom:0%; font-size:3vw; padding-top:22%; right: 43%; z-index: 999;
+   transform:rotate(-90deg);webkit-transform:rotate(-90deg);/*You should handle several browsers*/ } 
+
+  #mytext1 {position:fixed; color:black; padding-right:0%; padding-bottom:0%; font-size:3vw; padding-top:8%; right: 36.5%; z-index: 999;
+   transform:rotate(-90deg);webkit-transform:rotate(-90deg);/*You should handle several browsers*/ }
+
+
+
 
 
 
@@ -67,9 +81,8 @@
 
     <div class="title1 font-b"><a href="nojam.html"> NoJam</div>
       <div class="title2 font-b"><a href="nnojam.html">Life</a></div>
-      <div class="rim font-b"><a href="nojam(after).html">Rim&</a></div>
-      <div class="suk font-b"><a href="nojam(m).html">Suk</a></div>
-
+      <div id="mytext"> <div class="rim font-b"><a href="nojam(after).html">Rim&</a></div></div>
+      <div id="mytext1"> <div class="suk font-b"><a href="nojam(m).html">Suk</a></div></div>
 
 
 
