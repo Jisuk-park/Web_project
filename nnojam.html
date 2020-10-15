@@ -34,11 +34,12 @@
       
     .title1{position:fixed; color:black; padding-left:0%; padding-bottom:2%; font-size:18vw; top:0%; left: 0%; z-index: 999; -webkit-animation: shake 0.3s ease-in-out 0.1s infinite alternate;}
     .title2{position:fixed; color:black; padding-left:0%; padding-bottom:2%; font-size:18vw; top:0%; right: 0%; z-index: 999;}
-
     .rim{-webkit-animation: shake 0.1s ease-in-out 0.1s infinite alternate;}
     .suk{-webkit-animation: shake 0.1s ease-in-out 0.1s infinite alternate;}
 
     .photo{left: 2%; float: left; height: auto; padding-left: 1.5%; overflow: hidden; padding-top: 8%;}
+
+    .h{position: fixed; right: 37%; z-index: 999; padding-top: 1%; width: 3%;}
 
 
 
@@ -81,6 +82,25 @@
 
      #mask {position:absolute; z-index:9000; background-color:#000; display:none; left:0; top:20%;}
     .window{display: none; position:absolute; top:40%; left: 27%; z-index:10000;}
+
+
+.button1 { font-size: 1em; padding: 10%;color: black;border-radius: 50%/100%;text-decoration: none;cursor: pointer;transition: all 0.3s ease-out; z-index: 999;}
+.button1:hover {background:; z-index: 999;}
+
+.overlay {position: fixed;top: 0;bottom: 0;left: 0;right: 0;background: rgba(0, 0, 0, 0.1);transition: opacity 500ms;visibility: hidden;opacity: 0; z-index: 999;}
+.overlay:target {visibility: visible;opacity: 1;}
+
+.popup {left:0%; margin: 1% auto;padding: 0%;background: #fff; border-radius: 5px; width:35%; position: relative;transition: all 3s ease-in-out; z-index: 999;}
+
+.popup h2 {}
+.popup .close {position: absolute;top: 95%;right: 3%;transition: all 20ms;text-decoration: none;color: #333; z-index: 999; font-size:2vw;}
+.popup .close:hover {color: }
+.popup .content { max-height: 30%;overflow: auto; font-size:1.1vw; padding: 2%;text-align: center;}
+
+@media screen and (max-width: 70%)
+{.title{width: 70%; z-index: 999;}
+  .popup{width: 70%; z-index: 999;}}
+
       
 
   </style>
@@ -134,6 +154,19 @@
       <div class="title2 font-b"><a href="nnojam.html">Life</a></div>
       <div id="mytext"> <div class="rim font-b"><a href="nojam(after).html">Suk&</a></div></div>
       <div id="mytext1"> <div class="suk font-b"><a href="nojam(m).html">Rim</a></div></div>
+      <div class="h"><a class="button1" href="#popup1"><img src="jam/h.png" style="width:100%;"></a></div>
+
+
+
+    <div id="popup1" class="overlay">
+    <div class="popup">
+    <a class="close" href="#">&times;</a>
+    <div class="content font-f">
+    저희 완전 노잼이예요.<br> 하지만 나름 유잼으로 살아가고 있습니다.<br>
+    즐겁게 구경하시고, 건강한 하루되세요^^
+    </div>
+    </div>
+    </div>
 
 
 
